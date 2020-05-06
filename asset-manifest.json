@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/reactui/static/css/main.5ecd60fb.chunk.css",
-    "main.js": "/reactui/static/js/main.32578be0.chunk.js",
-    "main.js.map": "/reactui/static/js/main.32578be0.chunk.js.map",
+    "main.js": "/reactui/static/js/main.133ffe27.chunk.js",
+    "main.js.map": "/reactui/static/js/main.133ffe27.chunk.js.map",
     "runtime-main.js": "/reactui/static/js/runtime-main.bdcbb478.js",
     "runtime-main.js.map": "/reactui/static/js/runtime-main.bdcbb478.js.map",
     "static/js/2.11e754fb.chunk.js": "/reactui/static/js/2.11e754fb.chunk.js",
     "static/js/2.11e754fb.chunk.js.map": "/reactui/static/js/2.11e754fb.chunk.js.map",
     "index.html": "/reactui/index.html",
-    "precache-manifest.4d36738f3b53273c8ed37b3f24dec8cb.js": "/reactui/precache-manifest.4d36738f3b53273c8ed37b3f24dec8cb.js",
+    "precache-manifest.ca2d647e29a46ce0a3431f560d439fc3.js": "/reactui/precache-manifest.ca2d647e29a46ce0a3431f560d439fc3.js",
     "service-worker.js": "/reactui/service-worker.js",
     "static/css/main.5ecd60fb.chunk.css.map": "/reactui/static/css/main.5ecd60fb.chunk.css.map",
     "static/js/2.11e754fb.chunk.js.LICENSE.txt": "/reactui/static/js/2.11e754fb.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.bdcbb478.js",
     "static/js/2.11e754fb.chunk.js",
     "static/css/main.5ecd60fb.chunk.css",
-    "static/js/main.32578be0.chunk.js"
+    "static/js/main.133ffe27.chunk.js"
   ]
 }
