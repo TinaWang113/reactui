@@ -12,7 +12,7 @@ class TestPage2 extends Component {
     render() {
         return (
             <div>
-               <h2>Self-Learning react - testing page</h2>
+               <h2>Self-Learning react - testing page2</h2>
                 <button onClick={this.handleClickedHeader} >Home</button> 
                 <button onClick={this.handleClickedTestPage1} >TestPage1</button> 
             </div>
