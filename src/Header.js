@@ -4,10 +4,10 @@ import { withRouter } from "react-router-dom";
 
 class Header extends Component {
     handleClickedTestPage1 = () =>{
-        this.props.history.push("/TestPage1");
+        this.props.history.push("/reactui/TestPage1");
     };
     handleClickedTestPage2 = () =>{
-        this.props.history.push("/TestPage2");
+        this.props.history.push("/reactui/TestPage2");
     };
 
     render() {
