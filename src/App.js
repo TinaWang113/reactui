@@ -1,22 +1,40 @@
-import React, { Component } from 'react';
-import Header from "./Header";
+import React from 'react';
 import { Link, BrowserRouter as Router, Route } from 'react-router-dom'
-import TestPage1 from "./TestPage1";
+import { makeStyles } from '@material-ui/core/styles';
+import {Button, Typography } from '@material-ui/core/';
+import IconButton from '@material-ui/core/IconButton';
 
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Header />
-        <Router>
-          <Link to="/TestPage1" >TestPage1</Link>
-          <Link to="/TestPage2" >TestPage2</Link>
-        </Router>
-     
-      </div>
-    );
+const useStyles = makeStyles({
+  hellowThemeStyle:{
+    fontStyle: 'oblique',
+    fontSize:"30px",
+  },
+  buttonStyles:{
+    color:"green",
+    border:0
   }
+
+});
+
+export default function App() {
+    const classes = useStyles();
+
+    return (
+      <div className="App">   
+      <Typography 
+        className={classes.hellowThemeStyle}
+        align="center" 
+        color ="primary" 
+        variant="h1"
+      >
+            Helow there
+        </Typography>   
+        <IconButton color="primary" aria-label="upload picture" component="span">
+          Here is test IconButton
+        </IconButton>
+        <Button disable variant="outlined">Here is test for Button</Button>
+        </div>
+    );
 }
 
-export default App;
