@@ -28,6 +28,7 @@ const Content =() =>{
            data= {Date} 
            price = "120 CAD"
            description = "It's party combo for Mother's day. It's good for 4-5 people."
+           //temp
            imgSrc="https://imgur.com/HpkGimC.jpg"
            ingredients = "rice, fish, and so on....."
            />
