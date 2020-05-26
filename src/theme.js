@@ -1,5 +1,4 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-import { yellow, brown, blue, red, dark} from '@material-ui/core/colors';
 
 
 

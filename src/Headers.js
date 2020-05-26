@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
   root: {
     flexGrow: 1,
-    padding: theme.spacing(1),
+    marginLeft: theme.spacing(3),
 
   },
   menuButton: {
@@ -72,8 +72,8 @@ const Headers = () => {
             <MenuItem onClick={handleClose}>Ramen&Udon</MenuItem>
             <MenuItem onClick={handleClose}>Beverages</MenuItem>
           </Menu>
-          <Typography variant="h6" className={classes.title}>
-            Welecome to TOKO Sushi
+          <Typography variant="h6" className={classes.title} align="center">
+            <b>Welecome to TOKO Sushi</b>
           </Typography>
           <Button color="inherit" onClick="{Login}">Login</Button>
         </Toolbar>
