@@ -44,6 +44,17 @@ const Content =() =>{
            ingredients = "rice, fish, and so on....."
            />
            </Grid>
+           <Grid item xs={12} sm={6} >
+           <ItemCard 
+           title="Mother's Day Special" 
+           subtitle = "Limited offer" 
+           data= {Date} 
+           price = "120 CAD"
+           description = "It's party combo for Mother's day. It's good for 4-5 people."
+           //imgSrc=
+           ingredients = "rice, fish, and so on....."
+           />
+           </Grid>
        </Grid>  
     </div>
    );

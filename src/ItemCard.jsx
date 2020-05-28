@@ -4,8 +4,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import PlusOneIcon from '@material-ui/icons/PlusOne';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import AddIcon from '@material-ui/icons/Add';import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { red, deepPurple } from '@material-ui/core/colors';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
@@ -68,7 +67,7 @@ const ItemCard =(props) =>{
         }
         action ={
           <IconButton color="primary" aria-label="add one">
-            <PlusOneIcon />
+            <AddIcon />
           </IconButton>
         }
         title={title}
