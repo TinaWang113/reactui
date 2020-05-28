@@ -73,7 +73,7 @@ const Headers = () => {
             <MenuItem onClick={handleClose}>Beverages</MenuItem>
           </Menu>
           <Typography variant="h6" className={classes.title} align="center">
-            <b>Welecome to TOKO Sushi</b>
+            <b>Welcome to Tina online order system</b>
           </Typography>
           <Button color="inherit" onClick="{Login}">Login</Button>
         </Toolbar>

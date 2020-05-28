@@ -21,7 +21,7 @@ const Content =() =>{
         justify="space-evenly"
         alignItems="flex-start"
         >
-           <Grid item xs={12} sm={6} >
+           <Grid item xs={12} sm={4} >
            <ItemCard 
            title="Mother's Day Special" 
            subtitle = "Limited offer" 
@@ -33,7 +33,7 @@ const Content =() =>{
            ingredients = "rice, fish, and so on....."
            />
            </Grid>
-           <Grid item xs={12} sm={6} >
+           <Grid item xs={12} sm={4} >
            <ItemCard 
            title="Mother's Day Special -2" 
            subtitle = "Limited offer" 
@@ -44,9 +44,9 @@ const Content =() =>{
            ingredients = "rice, fish, and so on....."
            />
            </Grid>
-           <Grid item xs={12} sm={6} >
+           <Grid item xs={12} sm={4} >
            <ItemCard 
-           title="Mother's Day Special" 
+           title="" 
            subtitle = "Limited offer" 
            data= {Date} 
            price = "120 CAD"
