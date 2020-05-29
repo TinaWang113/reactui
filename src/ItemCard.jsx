@@ -4,14 +4,12 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-import AddIcon from '@material-ui/icons/Add';import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { red, deepPurple } from '@material-ui/core/colors';
+import AddIcon from '@material-ui/icons/Add';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
-import clsx from 'clsx';
+import Button from '@material-ui/core/Button';
 
 
 const useStyles = makeStyles((theme) =>({
@@ -19,59 +17,40 @@ const useStyles = makeStyles((theme) =>({
     flexGrow: 1,
     marginLeft: theme.spacing(2),
     marginRight: theme.spacing(2),
+    height:400,
   },
     title: {
       fontSize: 14,
-    },
-    pos: {
-      marginBottom: 12,
     },
     media: {
       height: 0,
       paddingTop: '56.25%', // 16:9
     },
-    expand: {
-      transform: 'rotate(0deg)',
-      marginLeft: 'auto',
-      transition: theme.transitions.create('transform', {
-        duration: theme.transitions.duration.shortest,
-      }),
-    },
-    expandOpen: {
-      transform: 'rotate(180deg)',
-    },
-    avatar: {
-      backgroundColor: red[500],
-    },
-    purple: {
-      color: theme.palette.getContrastText(deepPurple[900]),
-      backgroundColor: deepPurple[900],
-    },
+   
   }));
 
 const ItemCard =(props) =>{
     const classes = useStyles();
-    const [expanded, setExpanded] = React.useState(false);
+    //const [expanded, setExpanded] = React.useState(false);
     //get data
-    const {title, subtitle, data, price, description, imgSrc, ingredients} = props;
+    const {title, price, description, imgSrc, avatarUrl, ingredients} = props;
+    /*
     const handleExpandClick = () => {
       setExpanded(!expanded);
     };
-
+*/
 
     return (
        <Card className={classes.root}>
        <CardHeader
-        avatar={
-          <Avatar className={classes.purple} aria-label="Special">SP</Avatar>
-        }
+        avatar={ <Avatar alt="Menu" src={avatarUrl} className={classes.avatar} /> }
         action ={
           <IconButton color="primary" aria-label="add one">
-            <AddIcon />
+          <AddIcon  />
           </IconButton>
         }
         title={title}
-        subheader={data}
+        subheader={price}
       />
       <CardMedia
         className={classes.media}
@@ -79,33 +58,19 @@ const ItemCard =(props) =>{
         title={title}
       />
       <CardContent>
-        <Typography variant="body2" color="textSecondary" component="p">
-         {subtitle}, {price}/set
-        </Typography>    
-      <CardActions disableSpacing>      
-        <IconButton
-          className={clsx(classes.expand, {
-            [classes.expandOpen]: expanded,
-          })}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="Detail"
-        >
-          <ExpandMoreIcon />
-        </IconButton>
-      </CardActions>
+        <Typography className={classes.title} color="textSecondary" gutterBottom noWrap>
+          {description}
+        </Typography>
+        <Typography variant="subtitle1">
+          Material/ Ingredients:
+        </Typography>
+        <Typography variant="body2" component="p">
+          {ingredients}
+        </Typography>
       </CardContent>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Ingredients:</Typography>
-          <Typography paragraph>
-            {description}
-          </Typography>
-          <Typography paragraph>
-            {ingredients}
-          </Typography>
-        </CardContent>
-      </Collapse>
+      <CardActions>
+        <Button size="small">Customsize</Button>
+      </CardActions>
     </Card>
   );
 };
