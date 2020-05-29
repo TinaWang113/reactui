@@ -26,20 +26,16 @@ const useStyles = makeStyles((theme) =>({
       height: 0,
       paddingTop: '56.25%', // 16:9
     },
+    buttonStyle:{
+      color:"blue",
+      background: 'linear-gradient(45deg, #FE6888 30%, #FF8E53 90%)',
+    },
    
   }));
 
 const ItemCard =(props) =>{
     const classes = useStyles();
-    //const [expanded, setExpanded] = React.useState(false);
-    //get data
     const {title, price, description, imgSrc, avatarUrl, ingredients} = props;
-    /*
-    const handleExpandClick = () => {
-      setExpanded(!expanded);
-    };
-*/
-
     return (
        <Card className={classes.root}>
        <CardHeader
@@ -69,7 +65,7 @@ const ItemCard =(props) =>{
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Customsize</Button>
+        <Button className={classes.buttonStyle} fullWidth size="small">Customsize</Button>
       </CardActions>
     </Card>
   );

@@ -6,7 +6,6 @@ import Content from "./Content";
 
 
 const App = () => {
-  
     return (
      <Grid container spacing={3} direction="column">
       <Grid item > 
