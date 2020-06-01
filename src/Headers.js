@@ -9,14 +9,11 @@ import IconButton from '@material-ui/core/IconButton';
 
 
 const useStyles = makeStyles((theme) => ({
-
   status: {
     danger: 'orange',
   },
-
   root: {
     flexGrow: 1,
-
   },
   menuButton: {
     marginRight: theme.spacing(2),

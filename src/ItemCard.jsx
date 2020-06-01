@@ -15,20 +15,42 @@ import Button from '@material-ui/core/Button';
 const useStyles = makeStyles((theme) =>({
   root: {
     flexGrow: 1,
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(2),
-    height:400,
+    marginTop: theme.spacing(1),
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    maxWidth: 400,
+    borderRadius: 10,
+    borderColor: '#003366',
   },
     title: {
       fontSize: 14,
     },
     media: {
-      height: 0,
+      /*
+      height: 0, 
+      width: '100%',
       paddingTop: '56.25%', // 16:9
+      */
+     height: 150,     // as an example I am modifying width and height
+     width: '50%',
+     marginLeft: '25%',
+      
     },
     buttonStyle:{
       color:"blue",
-      background: 'linear-gradient(45deg, #FE6888 30%, #FF8E53 90%)',
+      '&:hover': {
+        backgroundColor: '#B2DF1E',
+        borderColor: '#0062cc',
+        boxShadow: 'none',
+      },
+      '&:active': {
+        boxShadow: 'none',
+        backgroundColor: '#0062cc',
+        borderColor: '#005cbf',
+      },
+      '&:focus': {
+        boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
+      },
     },
    
   }));
@@ -37,7 +59,7 @@ const ItemCard =(props) =>{
     const classes = useStyles();
     const {title, price, description, imgSrc, avatarUrl, ingredients} = props;
     return (
-       <Card className={classes.root}>
+       <Card className={classes.root} variant="outlined">
        <CardHeader
         avatar={ <Avatar alt="Menu" src={avatarUrl} className={classes.avatar} /> }
         action ={
@@ -54,15 +76,15 @@ const ItemCard =(props) =>{
         title={title}
       />
       <CardContent>
-        <Typography className={classes.title} color="textSecondary" gutterBottom noWrap>
-          {description}
-        </Typography>
-        <Typography variant="subtitle1">
-          Material/ Ingredients:
-        </Typography>
-        <Typography variant="body2" component="p">
-          {ingredients}
-        </Typography>
+          <Typography className={classes.title} color="textSecondary" gutterBottom noWrap>
+            {description}
+          </Typography>
+          <Typography variant="subtitle1">
+            Material/ Ingredients:
+          </Typography>
+          <Typography variant="textSecondary" component="p">
+            {ingredients}
+          </Typography>
       </CardContent>
       <CardActions>
         <Button className={classes.buttonStyle} fullWidth size="small">Customsize</Button>

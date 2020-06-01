@@ -7,8 +7,8 @@ import itemList from './constans';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      marginLeft: theme.spacing(2),
-      marginRight: theme.spacing(2),
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
     },
   }));
   
@@ -28,7 +28,7 @@ const Content =() => {
     <div className={classes.root}>
        <Grid container spacing ={2}
         direction="row"
-        justify="space-evenly"
+        ustify="space-evenly"
         alignItems="flex-start"
         > 
             {itemList.map(itemObject =>  getItemList(itemObject))}
